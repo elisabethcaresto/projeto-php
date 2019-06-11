@@ -15,6 +15,15 @@ $result = $conn->query($sql);
     <title>Document</title>
 </head>
 <body>
+<table>
+
+    <thead>
     
+    </thead>
+
+    <tbody>
+    
+    </tbody>
+</table>
 </body>
 </html>
