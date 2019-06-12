@@ -22,12 +22,20 @@ $result = $conn->query($sql);
     <th>ID</th>
     <th>Nome</th>
     <th>Data cadastro</th>
+    <th></th>
+    <th></th>
     </thead>
-    <?php while($dados = $result->fetch_assoc()){ ?>
+    <?php while($dados = $result->fetch_assoc()){
+        $id =  $dados['id_bandas'];  
+    ?>
     <tbody>
 
-        <td><?php echo "<a href='http://localhost/projPHP/projeto-php/excluir.php'>Excluir</a>"; ?></td>
-        <td><?php echo "<a href='http://localhost/projPHP/projeto-php/alterar.php'>Alterar</a>"; ?></td>
+
+        <td><?php echo $dados['id_bandas']?></td>
+        <td><?php echo $dados['Nome_bandas']?></td>
+        <td><?php echo $dados['Data_cadastro']?></td>
+        <td><?php echo "<a href='http://localhost/projPHP/projeto-php/excluir.php?id=$id'>Excluir</a>"; ?></td>
+        <td><?php echo "<a href='http://localhost/projPHP/projeto-php/alterar.php?id=$id '>Alterar</a>"; ?></td>
 
     </tbody>
     <?php } ?>
